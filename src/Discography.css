@@ -1,14 +1,22 @@
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  html {
+html {
     --main-bg-color: #343D46;
     --primary-text-color: #FFFFFF;
     --secondary-text-color: #F9F1A2;
   }
+  html, body {
+    width: 100%;
+  
+    margin: 0;
+    padding: 0;
+    background-color: #343D46 !important;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+  }
+  
   
   #root {
     width: 100%;
@@ -30,7 +38,7 @@ html, body {
     transform: translate(-50%, -50%);
   }
   
-  .h2 {
+  h2 {
     width: 100%;
     text-align: center;
     clear: both;
@@ -41,7 +49,7 @@ html, body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: right;
     align-items:stretch;
     width: 960px;
   }
@@ -74,6 +82,53 @@ html, body {
   .album .cover img { width: 200px; transition: transform .5s ease-in-out;  }
   .album .cover:hover img {  -webkit-transform: scale(1.1); transform: scale(1.1); }
   
+  
+  
+  
+  .search {
+    background: #8E2DE2;
+    background: -webkit-linear-gradient(to right, #4A00E0, #8E2DE2);
+    background: linear-gradient(to right, #4A00E0, #8E2DE2);
+  
+    border-radius: 8px;
+    text-align: center;
+    margin: 0 10px 60px 10px;
+  
+  }
+  .search form .input {
+    font-size: 24px;
+    line-height: 34px;
+    text-align: left;
+    display: block;
+    display: inline-block;
+    padding: 3px 10px;
+    border: none;
+    width: calc(100% - 300px);
+    color: #FFFFFF;
+    outline: none;
+    background: transparent;
+    margin-bottom: 10px;  
+  }
+  
+  .search form .btn {
+    background: transparent;
+    text-align: right;
+    width: 200px;
+    padding: 3px 10px;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 300;
+    text-align: center;
+    font-size: 24px;
+    line-height: 34px;
+    cursor: pointer;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    outline: none;
+  }
+  
+  
   @media screen and (max-width: 992px) {
     .discography { width: 100%; }
     .album { width: 50%; height: auto; margin-bottom: 40px; }
@@ -81,4 +136,7 @@ html, body {
     .album h2 { font-size: 32px; }
     .album .cover img { width: 90%; }
     .album .release-date { opacity: 1; font-size: 26px; }
+  
+    .search form .input { width: calc(100% - 150px); }
+    .search form .btn { width: 100px; }
   }
